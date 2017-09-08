@@ -26,13 +26,13 @@ docker run \
 ```
 
 # Environment Variables
-| Variable | Example | Default | Description |
-|---|---|---|
+| Variable | Example | Default |
+| -------- | ------- | ------- |
 | `MYSQL_HOST` | `mysql-host.example.com` | `127.0.0.1` |
 | `MYSQL_PORT` | `3306` | `3306` |
 | `MYSQL_USER` | `root` | `root` |
-| `MYSQL_PASS` | `password` |
-| `MYSQL_DATABASE` | `mydatabase` |
+| `MYSQL_PASS` | `password` | |
+| `MYSQL_DATABASE` | `mydatabase` | |
 | `BACKUP_TO` | `gcs` | `s3` |
 | `AWS_ACCESS_KEY_ID` | `xxx` | |
 | `AWS_SECRET_ACCESS_KEY` | `xxx` | |
