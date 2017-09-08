@@ -1,0 +1,29 @@
+version: "3"
+
+services:
+  mysql:
+    image: mysql:5.7
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_DATABASE=dumptest
+    ports:
+      - 3306:3306
+
+  mysqldump:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    depends_on:
+      - mysql
+    env_file:
+      - .env
+    environment:
+      - MYSQL_HOST=mysql
+      - MYSQL_PORT=3306
+      - MYSQL_USER=root
+      - MYSQL_PASS=password
+      - MYSQL_DATABASE=dumptest
+      - S3_PREFIX=backups/
+      - GCS_PREFIX=backups/
+    volumes:
+      - "./service-account.json:/credentials.json"
