@@ -20,8 +20,8 @@ docker run \
 ```bash
 docker run \
   -e "MYSQL_DATABASE=mydatabase" \
-  -e "BACKUP_TO=gcs"
-  -v "/path/to/service-account-key.json:/credentials.json" \
+  -e "BACKUP_TO=gcs" \
+  -v "/path/to/service-account-key.json:/credentials.json" \
   wondershake/mysqldump
 ```
 
