@@ -51,3 +51,4 @@ docker run \
 | `S3_PREFIX` | `backups/` | |
 | `GCS_BUCKET` | `mybucket` | |
 | `GCS_PREFIX` | `backups/` | |
+| `BZIP2_LEVEL` | `9` | `9` |

@@ -1,19 +1,24 @@
 FROM alpine:3.6
 LABEL maintainer="Wondershake"
 
+
+# Default Environment Variables
+
 ENV MYSQL_HOST "127.0.0.1"
 ENV MYSQL_PORT "3306"
 ENV MYSQL_USER "root"
-ENV MYSQL_PASS ""
-ENV MYSQL_DATABASE ""
 
 ENV BACKUP_TO "s3"
 
-ENV S3_BUCKET ""
 ENV S3_PREFIX ""
+ENV GCS_PREFIX ""
+
+ENV BZIP2_LEVEL "9"
+
+
+# Build Configuration
 
 ENV GCLOUD_SDK_VERSION "170.0.0"
-ENV BZIP2_LEVEL "9"
 
 RUN apk update \
 
