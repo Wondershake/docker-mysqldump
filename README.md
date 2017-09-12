@@ -6,12 +6,23 @@ See also `docker-compose.yml` as an example.
 
 ## Backup to Amazon S3
 
+With access key:
+
 ```bash
 docker run \
   -e "MYSQL_DATABASE=mydatabase" \
   -e "BACKUP_TO=s3" \
   -e "AWS_ACCESS_KEY_ID=xxxx" \
   -e "AWS_SECRET_ACCESS_KEY=xxxx" \
+  wondershake/mysqldump
+```
+
+With IAM role:
+
+```bash
+docker run \
+  -e "MYSQL_DATABASE=mydatabase" \
+  -e "BACKUP_TO=s3"
   wondershake/mysqldump
 ```
 
