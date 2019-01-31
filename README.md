@@ -44,6 +44,7 @@ docker run \
 | `MYSQL_USER` | `root` | `root` |
 | `MYSQL_PASS` | `password` | |
 | `MYSQL_DATABASE` | `mydatabase` | |
+| `MYSQL_OPTIONS` | `--single-transaction` | |
 | `BACKUP_TO` | `gcs` | `s3` |
 | `AWS_ACCESS_KEY_ID` | `xxx` | |
 | `AWS_SECRET_ACCESS_KEY` | `xxx` | |

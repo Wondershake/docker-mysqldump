@@ -6,6 +6,7 @@ cmd="mysqldump \
   -h${MYSQL_HOST} \
   -u${MYSQL_USER} \
   -p'${MYSQL_PASS}' \
+  ${MYSQL_OPTIONS} \
   ${MYSQL_DATABASE}"
 
 cmd="${cmd} | bzip2 -${BZIP2_LEVEL}"
