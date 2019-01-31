@@ -18,7 +18,7 @@ ENV BZIP2_LEVEL "9"
 
 # Build Configuration
 
-ENV GCLOUD_SDK_VERSION "170.0.0"
+ENV GCLOUD_SDK_VERSION "232.0.0"
 
 RUN apk update \
 
